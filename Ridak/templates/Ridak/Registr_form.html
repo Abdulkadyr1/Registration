@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{% static 'Ridak/css/style_registration.css'%}">
+</head>
+<body>
+    <div class="registration-container">
+        <form class="registration-form" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+    <a href="{% url 'log'%}">Войти</a>
+</body>
+</html>
